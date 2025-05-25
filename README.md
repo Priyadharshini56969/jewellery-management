@@ -22,7 +22,7 @@ A web-based jewellery product management system using CodeIgniter 4.
 
 1. Clone or download the repository into your XAMPP `htdocs` folder:
 
-    git clone https://github.com/yourusername/jewellery-management.git
+    git clone https://github.com/Priyadharshini56969/jewellery-management
     or download and extract the ZIP file.
 
 2. Import the SQL database dump (if provided) using phpMyAdmin or MySQL CLI.
