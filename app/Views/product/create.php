@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Add Jewellery Product</h2>
+    <?php if (isset($validation)): ?>
+        <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+    <?php endif; ?>
+
+    <form action="<?= base_url('product/store') ?>" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label>Product Name</label>
+            <input type="text" name="name" class="form-control" value="<?= set_value('name') ?>" required>
+        </div>
+        <div class="mb-3">
+            <label>Description</label>
+            <textarea name="description" class="form-control" required><?= set_value('description') ?></textarea>
+        </div>
+        <div class="mb-3">
+            <label>Price</label>
+            <input type="number" step="0.01" name="price" class="form-control" value="<?= set_value('price') ?>" required>
+        </div>
+        <div class="mb-3">
+            <label>Category</label>
+            <select name="category" class="form-control" required>
+                <option value="">Select Category</option>
+                <option value="Necklace" <?= set_select('category', 'Necklace') ?>>Necklace</option>
+                <option value="Ring" <?= set_select('category', 'Ring') ?>>Ring</option>
+                <option value="Bracelet" <?= set_select('category', 'Bracelet') ?>>Bracelet</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label>Product Image</label>
+            <input type="file" name="image" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+</div>
+</body>
+</html>
