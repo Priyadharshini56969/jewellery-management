@@ -1,68 +1,48 @@
-# CodeIgniter 4 Application Starter
+# 💎 Jewellery Management System
 
-## What is CodeIgniter?
+A web-based jewellery product management system using CodeIgniter 4.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## 🚀 Features
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- User login/logout
+- Add/edit/delete jewellery products
+- Image upload and resizing
+- Product list with DataTables (server-side)
+- Column visibility toggle
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 🛠️ Setup Instructions
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### Requirements:
+- PHP 7.4+
+- MySQL
+- Apache (XAMPP recommended)
+- Composer
 
-## Installation & updates
+### Steps:
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+1. Clone or download the repository into your XAMPP `htdocs` folder:
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+    git clone https://github.com/yourusername/jewellery-management.git
+    or download and extract the ZIP file.
 
-## Setup
+2. Import the SQL database dump (if provided) using phpMyAdmin or MySQL CLI.
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+3. Configure your database connection in the .env file (or app/Config/Database.php):
 
-## Important Change with index.php
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+database.default.hostname = localhost
+database.default.database = jewellery_db
+database.default.username = root
+database.default.password = 
+Start Apache and MySQL from the XAMPP control panel.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+4. Open your browser and visit:
 
-**Please** read the user guide for a better explanation of how CI4 works!
 
-## Repository Management
+http://localhost/jewellery-management/public/
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## Test Login
 
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- **Username:** admin  
+- **Password:** admin123
